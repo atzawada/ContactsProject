@@ -18,7 +18,15 @@ public final class ContactsDatabaseContract {
         public static final String COLUMN_NAME_LASTNAME = "last_name";
         public static final String COLUMN_NAME_NUMBER = "phone_number";
         public static final String COLUMN_NAME_EMAIL = "email";
-    }
 
+        public static final String SQL_CREATE_TABLE = "CREATE TABLE " + ContactEntry.TABLE_NAME +
+                " (" + ContactEntry._ID + " INTEGER PRIMARY KEY, " +
+                ContactEntry.COLUMN_NAME_FIRSTNAME + " TEXT, " + ContactEntry.COLUMN_NAME_LASTNAME +
+                " TEXT, " + ContactEntry.COLUMN_NAME_NUMBER + " TEXT, " +
+                ContactEntry.COLUMN_NAME_EMAIL + "TEXT)";
+
+        private static final String SQL_DELETE_TABLE = "DROP TABLE IF EXISTS " +
+                ContactEntry.TABLE_NAME;
+    }
 
 }
